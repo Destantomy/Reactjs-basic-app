@@ -1,4 +1,5 @@
 import {React, useState} from 'react'
+import Bloglist from './Bloglist';
 
 const Home = () => {
 // hook declare start
@@ -20,12 +21,7 @@ const Home = () => {
 // /hook declare start
   return (
     <div className="home">
-        {blogs.map((blog) => (
-          <div className="blog-preview" key={blogs.id}>
-            <h3>{blog.title}</h3>
-            <p>written by {blog.author}</p>
-          </div>
-        ))}
+        <Bloglist blogs={blogs} title='All indexs'/>
     </div>
   )
 }
