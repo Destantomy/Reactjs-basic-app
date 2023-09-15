@@ -23,12 +23,17 @@ const Home = () => {
         id: 3
       },
     ]);
-
 // /hook declare start
+
+    const handleDelete = (id) => {
+      const newBlogs = blogs.filter(blog => blog.id !== id);
+      setBlogs(newBlogs);
+    }
+
   return (
     <div className="home">
-        <Bloglist blogs={blogs} title='All Games'/>
-        <Bloglist blogs={blogs.filter((blog) => blog.author === 'Hideo Kajima')} title='Konami' />
+        <Bloglist blogs={blogs} title='All Games' handleDelete={handleDelete}/>
+        <Bloglist blogs={blogs.filter((blog) => blog.author === 'Hideo Kojima') } title='Konami' handleDelete={handleDelete} />
     </div>
   )
 }

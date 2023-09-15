@@ -1,11 +1,6 @@
 import React from 'react'
 
-const Bloglist = (props) => {
-    
-    const blogs = props.blogs;
-    const title = props.title;
-
-    console.log(props, blogs);
+const Bloglist = ({blogs, title, handleDelete}) => {
 
   return (
     <div className="blog-list">
@@ -13,7 +8,9 @@ const Bloglist = (props) => {
         {blogs.map((blog) => (
           <div className="blog-preview" key={blogs.id}>
             <h3>{blog.title}</h3>
-            <p>written by {blog.author}</p>
+            <p>studio: {blog.studio}</p>
+            <p>written: {blog.author}</p>
+            <button className="previews" onClick={() => handleDelete(blog.id)}>delete</button>
           </div>
         ))}
     </div>
