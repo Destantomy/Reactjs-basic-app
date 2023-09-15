@@ -6,22 +6,29 @@ const Home = () => {
     const [blogs, setBlogs] = useState([
       {
         title: 'Super Mario bros',
-        detail: 'lorem ipsum ..',
+        studio: 'Nintendo corp.',
         author: 'Shigeru Miyamoto',
         id: 1
       },
       {
         title: 'Mario Odessy',
-        detail: 'lorem ipsum ..',
+        studio: 'Nintendo corp.',
         author: 'Shigeru Miyamoto',
         id: 2
+      },
+      {
+        title: 'Metal Gear: The Panthom Pain',
+        studio: 'Fox',
+        author: 'Hideo Kojima',
+        id: 3
       },
     ]);
 
 // /hook declare start
   return (
     <div className="home">
-        <Bloglist blogs={blogs} title='All indexs'/>
+        <Bloglist blogs={blogs} title='All Games'/>
+        <Bloglist blogs={blogs.filter((blog) => blog.author === 'Hideo Kajima')} title='Konami' />
     </div>
   )
 }
