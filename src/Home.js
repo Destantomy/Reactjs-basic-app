@@ -2,19 +2,30 @@ import {React, useState} from 'react'
 
 const Home = () => {
 // hook declare start
-    const [name, setName] = useState('Mario');
-    const [p, setP] = useState('P1');
+    const [blogs, setBlogs] = useState([
+      {
+        title: 'Super Mario bros',
+        detail: 'lorem ipsum ..',
+        author: 'Shigeru Miyamoto',
+        id: 1
+      },
+      {
+        title: 'Mario Odessy',
+        detail: 'lorem ipsum ..',
+        author: 'Shigeru Miyamoto',
+        id: 2
+      },
+    ]);
 
-    const clicked = () => {
-        setName('Luigi');
-        setP('P2');
-    }
 // /hook declare start
   return (
     <div className="home">
-        <h2>Home Page</h2>
-        <p>{ name } is the {p}</p>
-        <button onClick={clicked}>Click Me</button>
+        {blogs.map((blog) => (
+          <div className="blog-preview" key={blogs.id}>
+            <h3>{blog.title}</h3>
+            <p>written by {blog.author}</p>
+          </div>
+        ))}
     </div>
   )
 }
