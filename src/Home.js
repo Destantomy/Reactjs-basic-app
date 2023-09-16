@@ -4,27 +4,27 @@ import Bloglist from './Bloglist';
 const Home = () => {
 // hook declare start
     const [blogs, setBlogs] = useState(null);
+    const [isPending, setIsPending] = useState(true);
 // /hook declare start
 
-    const handleDelete = (id) => {
-      const newBlogs = blogs.filter(blog => blog.id !== id);
-      setBlogs(newBlogs);
-    }
-
     useEffect(() => {
-      fetch('http://localhost:8000/blogs')
+      setTimeout(() => {
+        fetch('http://localhost:8000/blogs')
         .then(res => {
           return res.json();
         })
         .then(data => {
           console.log(data);
           setBlogs(data);
+          setIsPending(false);
         });
+      }, 1000);
     }, []);
 
   return (
     <div className="home">
-        {blogs && <Bloglist blogs={blogs} title='All Games' handleDelete={handleDelete}/>}
+        {isPending && <div>Loading ..</div>}
+        {blogs && <Bloglist blogs={blogs} title='All Games'/>}
     </div>
   )
 }
