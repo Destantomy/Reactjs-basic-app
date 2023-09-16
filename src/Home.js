@@ -1,4 +1,4 @@
-import {React, useState} from 'react'
+import {React, useEffect, useState} from 'react'
 import Bloglist from './Bloglist';
 
 const Home = () => {
@@ -25,15 +25,23 @@ const Home = () => {
     ]);
 // /hook declare start
 
+    const [name, setName] = useState('mario');
+
     const handleDelete = (id) => {
       const newBlogs = blogs.filter(blog => blog.id !== id);
       setBlogs(newBlogs);
     }
 
+    useEffect(() => {
+      console.log(name);
+    }, [name]);
+
   return (
     <div className="home">
         <Bloglist blogs={blogs} title='All Games' handleDelete={handleDelete}/>
         <Bloglist blogs={blogs.filter((blog) => blog.author === 'Hideo Kojima') } title='Konami' handleDelete={handleDelete} />
+        <p>{name}</p>
+        <button onClick={() => setName('luigi')}>Change name</button>
     </div>
   )
 }
