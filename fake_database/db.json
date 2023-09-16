@@ -1,0 +1,22 @@
+{
+    "blogs": [
+        {
+            "id": 1,
+            "title": "Super Mario Odessy",
+            "studio": "Nintendo corp.",
+            "author": "Shigeru Miyamoto"
+        },
+        {
+            "id": 2,
+            "title": "Metal Gear Solid V : The Phantom Pain",
+            "studio": "Fox corp.",
+            "author": "Hideo Kajima"
+        },
+        {
+            "id": 3,
+            "title": "Naruto: ",
+            "studio": "Bandai corp.",
+            "author": "Masashi Kishimoto"
+        }
+    ]
+}
