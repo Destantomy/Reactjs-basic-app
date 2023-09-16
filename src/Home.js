@@ -3,29 +3,8 @@ import Bloglist from './Bloglist';
 
 const Home = () => {
 // hook declare start
-    const [blogs, setBlogs] = useState([
-      {
-        title: 'Super Mario bros',
-        studio: 'Nintendo corp.',
-        author: 'Shigeru Miyamoto',
-        id: 1
-      },
-      {
-        title: 'Mario Odessy',
-        studio: 'Nintendo corp.',
-        author: 'Shigeru Miyamoto',
-        id: 2
-      },
-      {
-        title: 'Metal Gear: The Panthom Pain',
-        studio: 'Fox',
-        author: 'Hideo Kojima',
-        id: 3
-      },
-    ]);
+    const [blogs, setBlogs] = useState(null);
 // /hook declare start
-
-    const [name, setName] = useState('mario');
 
     const handleDelete = (id) => {
       const newBlogs = blogs.filter(blog => blog.id !== id);
@@ -33,15 +12,19 @@ const Home = () => {
     }
 
     useEffect(() => {
-      console.log(name);
-    }, [name]);
+      fetch('http://localhost:8000/blogs')
+        .then(res => {
+          return res.json();
+        })
+        .then(data => {
+          console.log(data);
+          setBlogs(data);
+        });
+    }, []);
 
   return (
     <div className="home">
-        <Bloglist blogs={blogs} title='All Games' handleDelete={handleDelete}/>
-        <Bloglist blogs={blogs.filter((blog) => blog.author === 'Hideo Kojima') } title='Konami' handleDelete={handleDelete} />
-        <p>{name}</p>
-        <button onClick={() => setName('luigi')}>Change name</button>
+        {blogs && <Bloglist blogs={blogs} title='All Games' handleDelete={handleDelete}/>}
     </div>
   )
 }
