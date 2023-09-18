@@ -2,16 +2,29 @@ import React, { useState } from 'react'
 
 const Create = () => {
   const [title, setTitle] = useState('')
-  const [auth, setAuth] = useState('desta')
+  const [author, setAuth] = useState('desta')
   const [studio, setStudio] = useState('')
   const [detail, setDetail] = useState('')
+  const [isPending, setPending] = useState(false)
 
 const handleSubmit = (e) => {
   // this function below to avoid the page reload while doing submit value
   e.preventDefault()
 
-  const blog = { title, auth, studio, detail }
-  console.log(blog)
+  const blog = { title, author, studio, detail }
+  // console.log(blog)
+
+  setPending(true);
+
+  fetch('http://localhost:8000/blogs/', {
+    method: 'POST',
+    headers: {"Content-Type": "application/json"},
+    body: JSON.stringify(blog)
+  })
+  .then(() => {
+    console.log('game data successfuly added')
+    setPending(false)
+  })
 }
 
   return (
@@ -25,7 +38,7 @@ const handleSubmit = (e) => {
         />
         <label>Author: </label>
         <select required
-        value={auth}
+        value={author}
         onChange={(e) => setAuth(e.target.value)}>
           <option value="desta">desta</option>
           <option value="destajr">destajr</option>
@@ -40,15 +53,9 @@ const handleSubmit = (e) => {
         value={detail}
         onChange={(e) => setDetail(e.target.value)}
         ></textarea>
-        <button>Add BLog</button>
+        {!isPending && <button>Add Game</button>}
+        {isPending && <button disabled>Adding ...</button>}
       </form>
-
-
-      <p><br /> Testing Area here onChange function</p>
-      <p>{title}</p>
-      <p>{auth}</p>
-      <p>{studio}</p>
-      <p>{detail}</p>
     </div>
   )
 }
