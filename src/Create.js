@@ -6,10 +6,18 @@ const Create = () => {
   const [studio, setStudio] = useState('')
   const [detail, setDetail] = useState('')
 
+const handleSubmit = (e) => {
+  // this function below to avoid the page reload while doing submit value
+  e.preventDefault()
+
+  const blog = { title, auth, studio, detail }
+  console.log(blog)
+}
+
   return (
     <div className='create'>
       <p>New Game Disk</p>
-      <form>
+      <form onSubmit={handleSubmit}>
         <label>Game title: </label>
         <input type="text" required autoFocus
         value={title}
@@ -35,7 +43,7 @@ const Create = () => {
         <button>Add BLog</button>
       </form>
 
-      
+
       <p><br /> Testing Area here onChange function</p>
       <p>{title}</p>
       <p>{auth}</p>
