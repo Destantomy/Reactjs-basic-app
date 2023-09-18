@@ -83,6 +83,41 @@
   }
 }
 
+.blog-details {
+  padding: 10px 16px;
+  margin: 20px 0;
+  border-bottom: 1px solid #fafafa;
+
+  article p {
+    text-align: justify;
+  }
+  h2 {
+    color: #f1356d;
+    text-decoration: underline;
+  }
+}
+
+.blog-details:hover {
+  border-radius: 5px;
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+.btn-delete {
+  color: white;
+  background-color: #f1356d;
+  border: 0;
+  border-radius: 5px;
+  padding: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+.btn-delete:hover {
+  color: #f1356d;
+  background-color: white;
+  border: 1px solid #f1356d;
+  border-radius: 5px;
+}
+
 /* create new blog */
 .create {
   max-width: 400px;
