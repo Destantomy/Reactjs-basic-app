@@ -68,5 +68,18 @@
   color: #f1356d;
   margin-bottom: 8px;
 }
+.blog-preview {
+  .btn-detail {
+    color: rgb(255, 119, 0);
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .btn-detail:hover{
+    text-decoration: none;
+    border: 1px solid rgb(255, 119, 0);
+    padding: 1px;
+    border-radius: 3px;
+  }
+}
 
 

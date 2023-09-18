@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 
 const Bloglist = ({blogs, title}) => {
 
@@ -10,6 +11,7 @@ const Bloglist = ({blogs, title}) => {
             <h3>{blog.title}</h3>
             <p>studio: {blog.studio}</p>
             <p>written: {blog.author}</p>
+            <Link to={`/blogs/${blog.id}`} className='btn-detail'>details</Link>
           </div>
         ))}
     </div>
