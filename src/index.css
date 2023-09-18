@@ -62,6 +62,7 @@
 
 .blog-preview:hover {
   box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
 }
 
 .blog-preview h3 {
