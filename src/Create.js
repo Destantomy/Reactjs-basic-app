@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { useHistory } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 const Create = () => {
   const [title, setTitle] = useState('')
@@ -7,7 +7,7 @@ const Create = () => {
   const [studio, setStudio] = useState('')
   const [detail, setDetail] = useState('')
   const [isPending, setPending] = useState(false)
-  const history = useHistory()
+  const navigate = useNavigate()
 
 const handleSubmit = (e) => {
   // this function below to avoid the page reload while doing submit value
@@ -27,7 +27,7 @@ const handleSubmit = (e) => {
     console.log('game data successfuly added')
     setPending(false)
     // history.go(-1) // --> this syntax mean go back one through history
-    history.push('/'); // --> this syntax wwill bring you back to root page / home
+    navigate('/'); // --> this syntax wwill bring you back to root page / home
   })
 }
 
