@@ -12,8 +12,8 @@ const Create = () => {
 const handleSubmit = (e) => {
   // this function below to avoid the page reload while doing submit value
   e.preventDefault()
-
-  const blog = { title, author, studio, detail }
+  const date = new Date().toLocaleString() + ""
+  const blog = { title, author, studio, detail, createdAt: date }
   // console.log(blog)
 
   setPending(true);

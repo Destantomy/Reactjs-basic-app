@@ -1,25 +1,28 @@
 {
   "blogs": [
     {
-      "id": 1,
-      "title": "Super Mario Odessy",
-      "studio": "Nintendo corp.",
-      "author": "Shigeru Miyamoto",
-      "detail": "Certainly, Super Mario Odyssey is a video game where Mario must rescue Princess Peach from Bowser, who plans to marry her. Mario travels through various kingdoms using his hat-shaped friend, Cappy, to possess objects and enemies to aid him in his quest. The game is known for its platforming and exploration elements."
-    },
-    {
-      "id": 2,
       "title": "Metal Gear Solid V : The Phantom Pain",
-      "studio": "Fox corp.",
-      "author": "Hideo Kajima",
-      "detail": "Certainly, Metal Gear Solid V: The Phantom Pain follows Big Boss on a quest for revenge against those who betrayed him, all while dealing with a mysterious enemy known as Skull Face and the development of advanced military technology."
+      "author": "desta",
+      "studio": "Kojima Productions",
+      "detail": "Set in 1984, nine years after the events of Ground Zeroes, the story follows mercenary leader Punished \"Venom\" Snake as he ventures into Soviet-occupied Afghanistan and the Angola–Zaire border region to exact revenge on those who destroyed his forces and came close to killing him during the climax of Ground Zeroes.",
+      "createdAt": "12/15/2023, 6:54:41 PM",
+      "id": 1
     },
     {
-      "id": 3,
-      "title": "Naruto: Ninja Storm 5",
-      "studio": "Bandai corp.",
-      "author": "Masashi Kishimoto",
-      "detail": "Certainly, Naruto Shippuden: Ultimate Ninja Storm 4 follows Naruto and his friends as they battle powerful foes, including Kaguya and Madara, to save the world from destruction and bring peace to the ninja world."
+      "title": "Super Mario Odessy",
+      "author": "desta",
+      "studio": "Nintendo's Entertainment Planning & Development",
+      "detail": "Super Mario Odyssey is a platform game in which players control Mario as he travels across many different worlds, known as \"Kingdoms\" within the game, on the hat-shaped ship Odyssey, to rescue Princess Peach from Bowser, who plans to forcibly marry her.",
+      "createdAt": "12/15/2023, 6:58:18 PM",
+      "id": 2
+    },
+    {
+      "title": "Legend of Zelda",
+      "author": "desta",
+      "studio": "Nintendo",
+      "detail": "The first game of The Legend of Zelda series, it is set in the fantasy land of Hyrule and centers on an elf-like boy named Link, who aims to collect the eight fragments of the Triforce of Wisdom in order to rescue Princess Zelda from Ganon.",
+      "createdAt": "12/15/2023, 7:03:58 PM",
+      "id": 3
     }
   ]
 }
