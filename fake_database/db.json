@@ -1,25 +1,12 @@
 {
   "blogs": [
     {
-      "id": 1,
-      "title": "Super Mario Odessy",
-      "studio": "Nintendo corp.",
-      "author": "Shigeru Miyamoto",
-      "detail": "Certainly, Super Mario Odyssey is a video game where Mario must rescue Princess Peach from Bowser, who plans to marry her. Mario travels through various kingdoms using his hat-shaped friend, Cappy, to possess objects and enemies to aid him in his quest. The game is known for its platforming and exploration elements."
-    },
-    {
-      "id": 2,
-      "title": "Metal Gear Solid V : The Phantom Pain",
-      "studio": "Fox corp.",
-      "author": "Hideo Kajima",
-      "detail": "Certainly, Metal Gear Solid V: The Phantom Pain follows Big Boss on a quest for revenge against those who betrayed him, all while dealing with a mysterious enemy known as Skull Face and the development of advanced military technology."
-    },
-    {
-      "id": 3,
-      "title": "Naruto: Ninja Storm 5",
-      "studio": "Bandai corp.",
-      "author": "Masashi Kishimoto",
-      "detail": "Certainly, Naruto Shippuden: Ultimate Ninja Storm 4 follows Naruto and his friends as they battle powerful foes, including Kaguya and Madara, to save the world from destruction and bring peace to the ninja world."
+      "title": "T",
+      "author": "desta",
+      "studio": "t",
+      "detail": "t",
+      "createdAt": "12/15/2023, 4:40:29 PM",
+      "id": 1
     }
   ]
 }
