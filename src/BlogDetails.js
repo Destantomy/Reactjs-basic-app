@@ -28,7 +28,8 @@ const BlogDetails = () => {
         <article>
             <h2>{ blog.title }</h2>
             <p>Story:<br/>{ blog.detail }</p>
-            <p>{formatDistanceToNow(new Date(blog.createdAt), { addSuffix: true })}</p>
+            <br />
+            <p className='fontsize-date'>{formatDistanceToNow(new Date(blog.createdAt), { addSuffix: true })}</p>
             <br />
             <button className='btn-delete' onClick={handeDelete} >delete</button>
         </article>

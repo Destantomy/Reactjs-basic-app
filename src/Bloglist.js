@@ -11,8 +11,9 @@ const Bloglist = ({blogs, title}) => {
           <div className="blog-preview" key={blog.id}>
             <h3>{blog.title}</h3>
             <p>studio: {blog.studio}</p>
-            <p>director: {blog.author}</p>
-            <p>{formatDistanceToNow(new Date(blog.createdAt), { addSuffix: true })}</p>
+            <p>written by: {blog.author}</p>
+            <br />
+            <p className='fontsize-date'>{formatDistanceToNow(new Date(blog.createdAt), { addSuffix: true })}</p>
             <br />
             <Link to={`/blogs/${blog.id}`} className='btn-detail'>details</Link>
           </div>
