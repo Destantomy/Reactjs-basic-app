@@ -6,11 +6,11 @@ import formatDistanceToNow from 'date-fns/formatDistanceToNow'
 const BlogDetails = () => {
 
     const { id } = useParams();
-    const { data: blog, error, isPending } = useFetch('http://localhost:8000/blogs/' + id);
+    const { data: blog, error, isPending } = useFetch('https://reactjs-json-server.vercel.app/blogs/' + id);
     const navigate = useNavigate()
 
     const handeDelete = () => {
-      fetch('http://localhost:8000/blogs/' + id, {
+      fetch('https://reactjs-json-server.vercel.app/blogs/' + id, {
         method: 'DELETE'
       })
       .then(() => {

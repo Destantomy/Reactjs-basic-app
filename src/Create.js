@@ -18,7 +18,7 @@ const handleSubmit = (e) => {
 
   setPending(true);
 
-  fetch('http://localhost:8000/blogs/', {
+  fetch('https://reactjs-json-server.vercel.app/blogs/', {
     method: 'POST',
     headers: {"Content-Type": "application/json"},
     body: JSON.stringify(blog)
